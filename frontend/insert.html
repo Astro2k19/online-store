@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="common/static/utils/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/addProduct" method="POST" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+            <label for="product-name" class="input-group-text">Название товара</label>
+            <input type="text" class="form-control" id="product-name" placeholder="Название товара" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="product-descr" class="input-group-text">Описание товара</label>
+            <input type="text" class="form-control" id="product-descr" placeholder="Описание товара" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="product-amount" class="input-group-text">Количество товара</label>
+            <input type="text" class="form-control" id="product-amount" placeholder="Количество товара" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="product-price" class="input-group-text">Цена товара</label>
+            <input type="text" class="form-control" id="product-price" placeholder="Цена товара" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <label for="select-section" class="input-group-text">Раздел товара</label>
+            <select id="select-section" class="form-select" required>
+                <option>Выберите раздел</option>
+                <option value="Ноутбуки и компьютерная техника">Ноутбуки и компьютерная техника</option>
+                <option value="Смартфоны и телефоны">Смартфоны и телефоны</option>
+                <option value="Бытовая техника">Бытовая техника</option>
+            </select>
+
+            <label for="select-subsection" class="input-group-text">Подраздел товара</label>
+            <select id="select-subsection" class="form-select" required>
+                <option selected>Выберите подраздел</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="product-img">Upload</label>
+            <input type="file" class="form-control" id="product-img" name="productImg" required>
+        </div>
+
+        <button id="submit-btn" type="submit" class="btn btn-success">Отправить</button>
+    </form>
+
+
+    <script src="common/static/utils/vendor/d3js/d3@7.js"></script>
+    <script src="insert/js/insert.js"></script>
+</body>
+
+</html>
